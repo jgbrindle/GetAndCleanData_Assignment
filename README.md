@@ -2,7 +2,7 @@
 
 ## Author
 
-Jeff Brindle, "Getting and Cleaning Data" Assignment, week 4,  February 2018
+Jeff Brindle, "Getting and Cleaning Data" Assignment, week 4,  18 February 2018
 
 ## Included Files
 
