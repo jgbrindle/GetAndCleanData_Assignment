@@ -1,4 +1,4 @@
-# A CodeBook for the file *tidy_average_by_subject_and_activity.txt*
+# Code Book for GetAndCleanData_Assignment
 
 ## Purpose
 
@@ -62,3 +62,14 @@ The file contains one line (row) for each subject / activity pair.  Each line co
 
 Note: see the description files in the following link for further information on what each of these 66 measures:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+## Transformations made to Produce the Tidy Dataset
+
+The file *run_analysis.R* produces the dataset by:
+
+1. Download and read in the required datasets.  Note: the file does not assume you already have the file or that the used directories are in a particular place or existing.  In fact the file will only be downloaded and unzipped if it has not already been done.
+2. Merge the training and the test sets to create one data set.  First of all the test and training reading are merged into one dataframe.  Bringing in the subject and activity columns is left until later to make measurement subsetting easier.
+3. Extract only the measurements on the mean and standard deviation for each measurement.  This is done by finding all names in the feature set that contain either *mean()* or *std()*.  Note: measures with only *mean* like *meanfreq* are not included.
+4. Use descriptive activity names to name the activities in the data set.  The activity codes are bound to the combined dataset and converted to factors.  This then allows us to name the levels via the *activity_levels* dataset.  I also bind the subject numbers in this step.
+5. Appropriately label the data set with descriptive variable names. As described earlier I perform a subtle transformation on the measurement names to make them easier to understand.
+6.From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.  This is done via *aggregate* and the resulting dataframe is written out.
