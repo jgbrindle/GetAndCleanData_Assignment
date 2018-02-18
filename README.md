@@ -9,7 +9,7 @@ Jeff Brindle, "Getting and Cleaning Data" Assignment, week 4,  February 2018
 1. *README.md* : this file
 2. *CodeBook.md* : describes the contents of the produced tidy dataset
 3. *tidy_average_by_subject_and_activity.txt* : a copy of the tidy dataset
-3. *run_analysis.R* : produces the tidy dataset of the average of each variable for each activity and each subject from the merged wearables motion data contained in https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+4. *run_analysis.R* : produces the tidy dataset of the average of each variable for each activity and each subject from the merged wearables motion data contained in https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 ## Producing the Tidy Dataset
 
